@@ -6,11 +6,16 @@ const pulseiras = document.querySelector('.pulseiras')
 const conjuntos = document.querySelector('.conjuntos')
 const pecas = document.querySelectorAll('.opcoes')
 const botao = document.querySelector('#botao-calcular')
+const botaoFinalizar = document.querySelector('#botao-finalizar')
 const botaoLimpar = document.querySelector('#botao-limpar')
 const compras = document.querySelector('.itens-comprados')
 const total = document.querySelector('.valor-total')
 const precoTotal = document.querySelector('#custo')
-
+const descontoNao = document.querySelector('#opcao-desconto-nao')
+const descontoSim = document.querySelector('#opcao-desconto-sim')
+const containerDesconto = document.querySelector('.valores-desconto')
+const valorDesconto = document.querySelector('#selecionar-desconto')
+const campoValorComDesconto = document.querySelector('#custo-com-desconto')
 
 
 let texto = 'Não houve compra'
@@ -45,6 +50,20 @@ function mostraOpcao(event) {
     }
 }
 
+function exibeDesconto(event) {
+    if(event.target.value == 'sim') {
+        containerDesconto.style.display = 'flex'
+    } else {
+        containerDesconto.style.display = 'none'
+    }
+}
+
+function calculaDesconto(event) {
+    valorComDesconto = custo - (custo * ((event.target.value)/100))
+    campoValorComDesconto.innerHTML = valorComDesconto.toFixed(2)
+    precoTotal.style.textDecoration = 'line-through'
+}
+
 function limpaValores() {
     texto = 'Não houve compra'
     valor = 0
@@ -73,7 +92,6 @@ function limpaTela() {
 }
 
 function iniciaCalculo() {
-    
     limpaTela()
     pecas.forEach(opcao => {
         if (opcao.getElementsByTagName('input')[0].checked) {
@@ -99,10 +117,14 @@ function resultado(totalidade, produtos) {
         custo = custo + Number(extrato)
     })
     precoTotal.innerHTML = `R$ ${custo.toFixed(2)}`
-    limpaValores()
+    
 }
 
 
 botao.addEventListener('click', iniciaCalculo)
 selecionar.addEventListener('change', mostraOpcao)
 botaoLimpar.addEventListener('click', limparTudo)
+botaoFinalizar.addEventListener('click', limparTudo)
+descontoNao.addEventListener('change', exibeDesconto)
+descontoSim.addEventListener('change', exibeDesconto)
+valorDesconto.addEventListener('change', calculaDesconto)

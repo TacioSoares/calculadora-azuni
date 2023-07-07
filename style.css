@@ -31,9 +31,9 @@ h2 {
 .seleciona-jóia{
     padding: 50px;
     display: flex;
+    flex-direction: column;
 }
 #joia {
-    margin: auto;
     padding: 8px;
     border: 1px solid #044F4F;
     border-radius: 5px;
@@ -103,7 +103,20 @@ h2 {
     cursor: pointer;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
 }
-
+#botao-finalizar {
+    color: white;
+    background-color: #044F4F;
+    width: 40%;
+    margin: auto;
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
+    font-weight: bold;
+    
+}
 .resultado {
     display: flex;
     flex-direction: column;
@@ -127,5 +140,26 @@ h2 {
 .total {
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
+}
+.abatimentos {
+    display: flex;
+    flex-direction: column;
+}
+.valores-desconto {
+    display: none;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.valores-desconto select {
+    width: 20%;
+    margin-top: 10px;
+}
+
+.total-com-desconto {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
     font-weight: bold;
 }

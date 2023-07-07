@@ -11,6 +11,7 @@
         <h1>Calculadora Azuni</h1>
     </header>
     <section class="seleciona-jóia">
+        <h3>Filtrar:</h3>
         <select name="tipo-de-joia" id="joia">
             <option value="vazio">---SELECIONE---</option>
             <option value="anel">Anéis</option>
@@ -451,8 +452,37 @@
             <div class="total">
                 <p>Total:</p> <span id="custo"></span>
             </div>
+            <div class="abatimentos">
+                <h3>Tipo de compra:</h3>
+                <div class="desconto-sim">
+                    <input type="radio" name="desconto" id="opcao-desconto-sim" value="sim">
+                    <label for="opcao-desconto-sim">Com desconto</label>
+                </div>
+                <div class="desconto-nao">
+                    <input type="radio" name="desconto" id="opcao-desconto-nao" value="nao" checked>
+                    <label for="opcao-desconto-nao" id="desconto">Sem desconto</label>
+                </div>
+            </div>
+        </section>
+        <section class="valores-desconto">
+            <div class="valor-desconto">
+                <h3>Selecionar desconto</h3>
+                <select name="descontos" id="selecionar-desconto">
+                    <option value="0">0%</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="25">25%</option>
+                    <option value="30">30%</option>
+                </select>
+            </div>
+            <div class="total-com-desconto">
+                <p>Total:</p> <span id="custo-com-desconto"></span>
+            </div>
         </section>
         <input id="botao-calcular" type="button" value="CALCULAR">
+        <input id="botao-finalizar" type="button" value="FINALIZAR">
         <input id="botao-limpar" type="button" value="LIMPAR">
     </section>
     <script src="calculadora.js"></script>
