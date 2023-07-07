@@ -82,11 +82,11 @@ function resultado(totalidade, produtos) {
     })
     totalidade.forEach(function (valor, index) {
         var extrato = (parseFloat(valor) * totalQuantidade[index]).toFixed(2)
-        total.innerHTML += `<p>${extrato}</p>`
+        total.innerHTML += `<p>R$ ${extrato}</p>`
 
         custo = custo + Number(extrato)
     })
-    precoTotal.innerHTML = `${custo.toFixed(2)}`
+    precoTotal.innerHTML = `R$ ${custo.toFixed(2)}`
     limpaValores()
 }
 
