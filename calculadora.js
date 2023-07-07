@@ -24,11 +24,23 @@ let custo = 0
 function mostraOpcao(event) {
     if(event.target.value == 'brinco') {
         brincos.style.display = 'flex'
+        colares.style.display = 'none'
+        conjuntos.style.display = 'none'
+        pulseiras.style.display = 'none'
     } else if (event.target.value == 'colar') {
+        brincos.style.display = 'none'
         colares.style.display = 'flex'
+        conjuntos.style.display = 'none'
+        pulseiras.style.display = 'none'
     } else if (event.target.value == 'conjunto') {
+        brincos.style.display = 'none'
+        colares.style.display = 'none'
         conjuntos.style.display = 'flex'
+        pulseiras.style.display = 'none'
     } else if (event.target.value == 'pulseira') {
+        brincos.style.display = 'none'
+        colares.style.display = 'none'
+        conjuntos.style.display = 'none'
         pulseiras.style.display = 'flex'
     }
 }
@@ -54,10 +66,10 @@ function limpaTela() {
     compras.innerHTML = '' 
     total.innerHTML = ''
     precoTotal.innerHTML = ''
-    brincos.style.display = 'none'
-    colares.style.display = 'none'
-    conjuntos.style.display = 'none'
-    pulseiras.style.display = 'none'
+    brincos.style.display = 'flex'
+    colares.style.display = 'flex'
+    conjuntos.style.display = 'flex'
+    pulseiras.style.display = 'flex'
 }
 
 function iniciaCalculo() {

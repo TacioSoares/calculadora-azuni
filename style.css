@@ -48,7 +48,7 @@ h2 {
 }
 
 .brincos, .colares, .aneis, .pulseiras, .conjuntos {
-    display: none;
+    display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
