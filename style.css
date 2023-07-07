@@ -84,8 +84,21 @@ h2 {
     width: 30%;
     margin: auto;
     padding: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
+    font-weight: bold;
+}
+#botao-limpar {
+    color: white;
+    background-color: #089b9b;
+    width: 30%;
+    margin: auto;
+    padding: 8px;
+    margin-bottom: 50px;
+    margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);

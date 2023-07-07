@@ -6,6 +6,7 @@ const pulseiras = document.querySelector('.pulseiras')
 const conjuntos = document.querySelector('.conjuntos')
 const pecas = document.querySelectorAll('.opcoes')
 const botao = document.querySelector('#botao-calcular')
+const botaoLimpar = document.querySelector('#botao-limpar')
 const compras = document.querySelector('.itens-comprados')
 const total = document.querySelector('.valor-total')
 const precoTotal = document.querySelector('#custo')
@@ -42,6 +43,11 @@ function limpaValores() {
     pecas.forEach(opcao =>{
         opcao.getElementsByTagName('input')[0].checked = false
     })
+}
+
+function limparTudo() {
+    limpaValores();
+    limpaTela();
 }
 
 function limpaTela() {
@@ -87,3 +93,4 @@ function resultado(totalidade, produtos) {
 
 botao.addEventListener('click', iniciaCalculo)
 selecionar.addEventListener('change', mostraOpcao)
+botaoLimpar.addEventListener('click', limparTudo)
