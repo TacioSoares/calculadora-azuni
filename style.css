@@ -1,0 +1,111 @@
+*,
+::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header h1 {
+    text-align: center;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+.seleciona-jóia{
+    padding: 50px;
+    display: flex;
+}
+#joia {
+    margin: auto;
+    padding: 8px;
+    border: 1px solid #044F4F;
+    border-radius: 5px;
+}
+
+#joia option {
+    font-weight: bold;
+}
+.produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+.brincos, .colares, .aneis, .pulseiras, .conjuntos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    text-align: center;
+}
+
+.opcoes:nth-child(even) {
+    background-color: #089b9b;
+    color: rgba(255, 255, 255, 0.836);
+}
+.escolhas {
+    display: flex;
+    align-items: center;
+}
+.opcoes input {
+    margin-right: 8px;
+}
+.quantidade {
+    width: 35px;
+    border: 1px solid #089b9b;
+}
+.opcoes span {
+    font-weight: bold;
+}
+
+#botao-calcular {
+    color: white;
+    background-color: #044F4F;
+    width: 30%;
+    margin: auto;
+    padding: 8px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.473);
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+}
+.resultado div {
+    margin-top: 20px;
+}
+.itens-comprados, .valor-total {
+    display: flex;
+    flex-direction: column;
+}
+.itens-comprados p, .valor-total p {
+    margin-top: 5px;
+}
+
+.resumo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}

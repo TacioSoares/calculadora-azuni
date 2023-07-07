@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CALCULADORA AZUNI</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora Azuni</h1>
+    </header>
+    <section class="seleciona-jóia">
+        <select name="tipo-de-joia" id="joia">
+            <option value="vazio">---SELECIONE---</option>
+            <option value="anel">Anéis</option>
+            <option value="brinco">Argolas e Brincos</option>
+            <option value="colar">Chokers, Colares e Gargantilhas</option>
+            <option value="conjunto">Conjuntos</option>
+            <option value="pulseira">Pulseiras</option>
+        </select>
+    </section>
+    <section class="produtos">
+        <div class="anéis">
+
+        </div>
+        <div class="colares">
+            <h2>Chokers, Colares e Gargantilhas</h2>
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="gargantilha-cruz-deitada">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="gargantilha-cruz-deitada">Gargantilha cruz deitada</label>
+                <span class="preco">31.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="rosa-strass-vermelho">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="rosa-strass-vermelho">Gargantilha com pingente de Rosa a laser e strass vermelho</label> 
+                <span class="preco">39.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="gargantilha-cruz-zircônia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="gargantilha-cruz-zircônia">Gargantilha cruz e zircônia</label>
+                <span class="preco">35.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="colar-tres-circulos">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="colar-tres-circulos">Colar três círculos</label>
+                <span class="preco">35.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="gargantilha-plaquinha-abaulada-e-zirconia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="gargantilha-plaquinha-abaulada-e-zirconia">Gargantilha plaquinha abaulada e zircônia</label>
+                <span class="preco">37.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="gargantilha-palito">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="gargantilha-palito">Gargantilha palito</label>
+                <span class="preco">30.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="gargantilha-esfera-fixa">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="gargantilha-esfera-fixa">Gargantilha esfera fixa</label>
+                <span class="preco">35.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="choker-corações-entrelaçados">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="choker-corações-entrelaçados">Choker Corações Entrelaçados </label>
+                <span class="preco">41.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="choker-moedinhas">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="choker-moedinhas">Choker moedinhas</label>
+                <span class="preco">39.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="gargantilha-cruz-deitada">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="gargantilha-cruz-deitada">Gargantilha cruz deitada</label>
+                <span class="preco">39.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="chocker-pequenos-corações">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="chocker-pequenos-corações">Chocker pequenos corações</label>
+                <span class="preco">39.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-colares" id="chocker-escama-de-peixe">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="chocker-escama-de-peixe">Chocker escama de peixe</label>
+                <span class="preco">41.90</span>
+            </div>
+        </div>
+        <div class="brincos">
+
+            <h2>Brincos e Argolas</h2>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-estrela-com-zirconia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-estrela-com-zirconia">Brinco estrela com zircônia</label>
+                <span class="preco">20.90</span>
+            </div>
+            
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-ondulado-gota">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-ondulado-gota">Brinco ondulado gota</label>
+                <span class="preco">15.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-quadrado-com-zirconia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-quadrado-com-zirconia">Brinco quadrado com zircônia</label>
+                <span class="preco">20.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-ondulado-circulo">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-ondulado-circulo">Brinco ondulado círculo</label>
+                <span class="preco">15.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-olho-grego-solitario">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-olho-grego-solitario">Brinco olho grego solitário</label>
+                <span class="preco">12.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-de-argola-olho-grego">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-de-argola-olho-grego">Brinco de argola olho grego</label>
+                <span class="preco">18.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argolinha-de-pressao-em-zirconia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argolinha-de-pressao-em-zirconia">Argolinha de pressão em zircônia</label>
+                <span class="preco">21.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-triangulo-duplo-vazado">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-triangulo-duplo-vazado">Brinco triângulo duplo vazado</label>
+                <span class="preco">20.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argolinha-de-pressao-coraçao-com-zirconia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argolinha-de-pressao-coraçao-com-zirconia">Argolinha de pressão coração com zircônia</label>
+                <span class="preco">22.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-moeda-de-chapa">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="Brinco triângulo duplo vazado">Brinco moeda de chapa</label>
+                <span class="preco">21.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argola-fio-triangular">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argola-fio-triangular">Argola fio triangular</label>
+                <span class="preco">15.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-quadrado-de-fio">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-quadrado-de-fio">Brinco quadrado de fio</label>
+                <span class="preco">14.90</span>
+            </div>
+            
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-de-argola-fio-quadrado">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-de-argola-fio-quadrado">Brinco de argola fio quadrado</label>
+                <span class="preco">16.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argola-torcida-gancho-italiano">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argola-torcida-gancho-italiano">Argola torcida gancho italiano</label>
+                <span class="preco">21.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argola-curvada-P">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argola-curvada-P">Argola curvada P</label>
+                <span class="preco">15.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argola-curvada-M">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argola-curvada-M">Argola curvada M</label>
+                <span class="preco">17.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-de-argola-trançada">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-de-argola-trançada">Brinco de argola trançada</label>
+                <span class="preco">21.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="argolinha-trabalhada">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="argolinha-trabalhada">Argolinha trabalhada</label>
+                <span class="preco">18.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-mini-escama-furtacor">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-mini-escama-furtacor">Brinco mini Escama furtacor</label>
+                <span class="preco">7,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-mini-ancora">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-mini-ancora">Brinco mini âncora</label>
+                <span class="preco">7,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="chocker-escama-de-peixe">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-mini-coraçao">Brinco mini coração</label>
+                <span class="preco">7,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-mini-estrela">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-mini-estrela">Brinco mini estrela</label>
+                <span class="preco">7,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-mini-meia-lua">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-mini-meia-lua">Brinco mini meia lua</label>
+                <span class="preco">7,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-mini-borboleta">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-mini-borboleta">Brinco mini Borboleta</label>
+                <span class="preco">7,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-solitario-zirconia-4">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-solitario-zirconia-4">Brinco solitário zircônia 4 mm</label>
+                <span class="preco">9,90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-solitario-zirconia-5">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-solitario-zirconia-5">Brinco solitário zircônia 5 mm</label>
+                <span class="preco">12.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-solitario-zirconia-8">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-solitario-zirconia-8">Brinco solitário zircônia 8 mm</label>
+                <span class="preco">15.90</span>
+            </div>
+
+            <div class="opcoes">
+                <div class="escolhas">
+                    <input type="checkbox" name="check-brincos" id="brinco-solitario-zirconia-cravaçao-inglesa">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="brinco-solitario-zirconia-cravaçao-inglesa">Brinco solitário zircônia cravação inglesa</label>
+                <span class="preco">19.90</span>
+            </div>
+
+        </div>
+        <div class="conjuntos">
+            <h2>Conjuntos</h2>
+
+            <div class="opcoes">
+                <div>
+                    <input type="checkbox" name="check-brincos" id="conjunto-coraçao-com-zirconia">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="conjunto-coraçao-com-zirconia">Conjunto Coração com zircônia</label>
+                <span class="preco">48.90</span>
+            </div>            
+        </div>
+        <div class="pulseiras">
+            <h2>Pulseiras</h2>
+            <div class="opcoes">
+                <div>
+                    <input type="checkbox" name="check-brincos" id="pulseira-esfera-fixa">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="pulseira-esfera-fixa">Pulseira esfera fixa</label>
+                <span class="preco">29.90</span>
+            </div> 
+            
+            <div class="opcoes">
+                <div>
+                    <input type="checkbox" name="check-brincos" id="pulseira-coraçoes-entrelaçados">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="pulseira-coraçoes-entrelaçados">Pulseira Corações entrelaçados</label>
+                <span class="preco">32.90</span>
+            </div> 
+
+            <div class="opcoes">
+                <div>
+                    <input type="checkbox" name="check-brincos" id="pulseira-escama-de-peixe">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="pulseira-escama-de-peixe">Pulseira escama de peixe</label>
+                <span class="preco">34.90</span>
+            </div> 
+
+            <div class="opcoes">
+                <div>
+                    <input type="checkbox" name="check-brincos" id="pulseira-moedinhas">
+                    <input type="number" class="quantidade" name="quantidade" value="1">
+                </div>
+                <label for="pulseira-moedinhas">Pulseira moedinhas</label>
+                <span class="preco">30.90</span>
+            </div> 
+        </div>
+        <section class="resultado">
+            <div class="resumo">
+                <div class="itens-comprados">
+                </div>
+                <div class="valor-total">
+                </div>
+            </div>
+            <div class="total">
+                <p>Total:</p> <span id="custo"></span>
+            </div>
+        </section>
+        <input id="botao-calcular" type="button" value="CALCULAR">
+    </section>
+    <script src="calculadora.js"></script>
+</body>
+</html>
