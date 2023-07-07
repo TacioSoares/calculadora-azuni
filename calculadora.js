@@ -1,3 +1,9 @@
+
+const selecionar = document.querySelector('#joia')
+const colares = document.querySelector('.colares')
+const brincos = document.querySelector('.brincos')
+const pulseiras = document.querySelector('.pulseiras')
+const conjuntos = document.querySelector('.conjuntos')
 const pecas = document.querySelectorAll('.opcoes')
 const botao = document.querySelector('#botao-calcular')
 const compras = document.querySelector('.itens-comprados')
@@ -13,6 +19,18 @@ let totalValor = []
 let totalQuantidade = []
 
 let custo = 0
+
+function mostraOpcao(event) {
+    if(event.target.value == 'brinco') {
+        brincos.style.display = 'flex'
+    } else if (event.target.value == 'colar') {
+        colares.style.display = 'flex'
+    } else if (event.target.value == 'conjunto') {
+        conjuntos.style.display = 'flex'
+    } else if (event.target.value == 'pulseira') {
+        pulseiras.style.display = 'flex'
+    }
+}
 
 function limpaValores() {
     texto = 'Não houve compra'
@@ -30,6 +48,10 @@ function limpaTela() {
     compras.innerHTML = '' 
     total.innerHTML = ''
     precoTotal.innerHTML = ''
+    brincos.style.display = 'none'
+    colares.style.display = 'none'
+    conjuntos.style.display = 'none'
+    pulseiras.style.display = 'none'
 }
 
 function iniciaCalculo() {
@@ -64,4 +86,4 @@ function resultado(totalidade, produtos) {
 
 
 botao.addEventListener('click', iniciaCalculo)
-
+selecionar.addEventListener('change', mostraOpcao)
