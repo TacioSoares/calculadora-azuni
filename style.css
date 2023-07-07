@@ -8,9 +8,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #a9e2e23a;
+    padding: 20px;
+}
 
 header h1 {
     text-align: center;
+    padding: 5px;
+    font-size: 2.5em;
+    color: #044F4F;
 }
 
 
