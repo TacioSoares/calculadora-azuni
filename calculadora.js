@@ -80,8 +80,8 @@ function limpaValores(event) {
     todasCompras = []
     totalValor = []
     totalQuantidade = []
+    custo = 0
     if(event.target) {
-        custo = 0
         valorComDesconto = 0
         console.log('Ok')
         pecas.forEach(opcao => {
@@ -115,7 +115,6 @@ function limpaTela(event) {
 
 function iniciaCalculo() {
     if(valor != 0) {
-        console.log(valor)
         limparTudo(valor)
         iniciaCalculo()
     } else {
@@ -137,6 +136,10 @@ function iniciaCalculo() {
 }
 
 function resultado(totalidade, produtos) {
+    if(totalidade.length < 1) {
+        campoValorComDesconto.innerHTML = ''
+        return window.alert('Preencha os campos antes de calcular')
+    }
     produtos.forEach(function (produto, index) {
         compras.innerHTML += `<p>${totalQuantidade[index]} ${produto}</p>`
     })
