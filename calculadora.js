@@ -5,19 +5,21 @@ const brincos = document.querySelector('.brincos')
 const pulseiras = document.querySelector('.pulseiras')
 const conjuntos = document.querySelector('.conjuntos')
 const pecas = document.querySelectorAll('.opcoes')
-const botao = document.querySelector('#botao-calcular')
+const botaoComprar = document.querySelector('#botao-calcular')
 const botaoFinalizar = document.querySelector('#botao-finalizar')
 const botaoLimpar = document.querySelector('#botao-limpar')
 const compras = document.querySelector('.itens-comprados')
 const total = document.querySelector('.valor-total')
 const precoTotal = document.querySelector('#custo')
+const containerOpcaoDesconto = document.querySelector('.abatimentos')
 const descontoNao = document.querySelector('#opcao-desconto-nao')
 const descontoSim = document.querySelector('#opcao-desconto-sim')
 const containerDesconto = document.querySelector('.valores-desconto')
 const valorDesconto = document.querySelector('#selecionar-desconto')
 const campoValorComDesconto = document.querySelector('#custo-com-desconto')
 
-
+let porcentagemDesconto = 0
+let valorComDesconto = 0
 let texto = 'Não houve compra'
 let valor = 0
 let todasCompras = []
@@ -47,41 +49,54 @@ function mostraOpcao(event) {
         colares.style.display = 'none'
         conjuntos.style.display = 'none'
         pulseiras.style.display = 'flex'
+    } else {
+        brincos.style.display = 'flex'
+        colares.style.display = 'flex'
+        conjuntos.style.display = 'flex'
+        pulseiras.style.display = 'flex'
     }
 }
 
 function exibeDesconto(event) {
     if(event.target.value == 'sim') {
         containerDesconto.style.display = 'flex'
+        precoTotal.style.textDecoration = 'line-through'
     } else {
         containerDesconto.style.display = 'none'
+        precoTotal.style.textDecoration = 'none'
     }
 }
 
 function calculaDesconto(event) {
-    valorComDesconto = custo - (custo * ((event.target.value)/100))
+    porcentagemDesconto = event.target.value
+    valorComDesconto = custo - (custo * ((porcentagemDesconto)/100))
     campoValorComDesconto.innerHTML = valorComDesconto.toFixed(2)
     precoTotal.style.textDecoration = 'line-through'
 }
 
-function limpaValores() {
+function limpaValores(event) {
     texto = 'Não houve compra'
     valor = 0
     todasCompras = []
     totalValor = []
     totalQuantidade = []
-    custo = 0
-    pecas.forEach(opcao =>{
-        opcao.getElementsByTagName('input')[0].checked = false
-    })
+    if(event.target) {
+        custo = 0
+        valorComDesconto = 0
+        console.log('Ok')
+        pecas.forEach(opcao => {
+            opcao.getElementsByTagName('input')[0].checked = false
+        })
+    }
+
 }
 
-function limparTudo() {
-    limpaValores();
-    limpaTela();
+function limparTudo(event) {
+    limpaValores(event);
+    limpaTela(event);
 }
 
-function limpaTela() {
+function limpaTela(event) {
     compras.innerHTML = '' 
     total.innerHTML = ''
     precoTotal.innerHTML = ''
@@ -89,21 +104,36 @@ function limpaTela() {
     colares.style.display = 'flex'
     conjuntos.style.display = 'flex'
     pulseiras.style.display = 'flex'
+    containerOpcaoDesconto.style.display = 'none'
+    if(event.target) {
+        campoValorComDesconto.innerHTML = ''
+        containerDesconto.style.display = 'none'
+        descontoNao.checked = true
+        precoTotal.style.textDecoration = 'none'
+    }
 }
 
 function iniciaCalculo() {
-    limpaTela()
-    pecas.forEach(opcao => {
-        if (opcao.getElementsByTagName('input')[0].checked) {
-            texto = opcao.getElementsByTagName('label')
-            valor = opcao.getElementsByTagName('span')
-            quantidade = opcao.getElementsByClassName('quantidade')
-            totalQuantidade.push(quantidade[0].value)
-            todasCompras.push(texto[0].innerHTML)
-            totalValor.push(valor[0].innerHTML)
-        }
-    })
-    resultado(totalValor, todasCompras)
+    if(valor != 0) {
+        console.log(valor)
+        limparTudo(valor)
+        iniciaCalculo()
+    } else {
+        
+        containerOpcaoDesconto.style.display = 'flex'
+        pecas.forEach(opcao => {
+            if (opcao.getElementsByTagName('input')[0].checked) {
+                texto = opcao.getElementsByTagName('label')[0].innerHTML
+                valor = opcao.getElementsByTagName('span')[0].innerHTML
+                quantidade = opcao.getElementsByClassName('quantidade')
+                totalQuantidade.push(quantidade[0].value)
+                todasCompras.push(texto)
+                totalValor.push(valor)
+            }
+        })
+        
+        resultado(totalValor, todasCompras)
+    }
 }
 
 function resultado(totalidade, produtos) {
@@ -117,11 +147,13 @@ function resultado(totalidade, produtos) {
         custo = custo + Number(extrato)
     })
     precoTotal.innerHTML = `R$ ${custo.toFixed(2)}`
+    valorComDesconto = custo - (custo * ((porcentagemDesconto)/100))
+    campoValorComDesconto.innerHTML = valorComDesconto.toFixed(2)
     
 }
 
 
-botao.addEventListener('click', iniciaCalculo)
+botaoComprar.addEventListener('click', iniciaCalculo)
 selecionar.addEventListener('change', mostraOpcao)
 botaoLimpar.addEventListener('click', limparTudo)
 botaoFinalizar.addEventListener('click', limparTudo)
