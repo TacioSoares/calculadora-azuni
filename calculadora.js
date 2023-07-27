@@ -1,5 +1,6 @@
 
 const selecionar = document.querySelector('#joia')
+const aneis = document.querySelector('.aneis')
 const colares = document.querySelector('.colares')
 const brincos = document.querySelector('.brincos')
 const pulseiras = document.querySelector('.pulseiras')
@@ -30,26 +31,37 @@ let custo = 0
 
 function mostraOpcao(event) {
     if(event.target.value == 'brinco') {
+        aneis.style.display = 'none'
         brincos.style.display = 'flex'
         colares.style.display = 'none'
         conjuntos.style.display = 'none'
         pulseiras.style.display = 'none'
     } else if (event.target.value == 'colar') {
+        aneis.style.display = 'none'
         brincos.style.display = 'none'
         colares.style.display = 'flex'
         conjuntos.style.display = 'none'
         pulseiras.style.display = 'none'
     } else if (event.target.value == 'conjunto') {
+        aneis.style.display = 'none'
         brincos.style.display = 'none'
         colares.style.display = 'none'
         conjuntos.style.display = 'flex'
         pulseiras.style.display = 'none'
     } else if (event.target.value == 'pulseira') {
+        aneis.style.display = 'none'
         brincos.style.display = 'none'
         colares.style.display = 'none'
         conjuntos.style.display = 'none'
         pulseiras.style.display = 'flex'
+    } else if (event.target.value == 'anel') {
+        aneis.style.display = 'flex'
+        brincos.style.display = 'none'
+        colares.style.display = 'none'
+        conjuntos.style.display = 'none'
+        pulseiras.style.display = 'none'
     } else {
+        aneis.style.display = 'flex'
         brincos.style.display = 'flex'
         colares.style.display = 'flex'
         conjuntos.style.display = 'flex'
